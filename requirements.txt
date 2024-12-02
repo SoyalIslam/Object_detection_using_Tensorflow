@@ -1,0 +1,5 @@
+tensorflow-gpu==2.10.0
+opencv-python
+numpy==1.6
+tkinter
+Pillow

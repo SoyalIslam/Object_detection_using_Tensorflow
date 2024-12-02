@@ -10,7 +10,7 @@ class App:
         self.detector = Detector()
         self.root = root
         self.root.title("Object Detection GUI")
-        self.root.geometry("900x700")
+        self.root.geometry("1920x1080")
 
         self.style = ttk.Style()
         self.style.configure('TButton', font=('Helvetica', 12), padding=10)

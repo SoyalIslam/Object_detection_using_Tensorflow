@@ -5,7 +5,6 @@ import tensorflow as tf
 from tensorflow.python.keras.utils.data_utils import get_file
 
 np.random.seed(40)
-
 class Detector:
     def __init__(self):
         self.model = None
@@ -43,15 +42,13 @@ class Detector:
 
         imH, imW, inC = image.shape
 
-        # Apply non-max suppression
         boxIdx = tf.image.non_max_suppression(
             boxes,
             classScores,
-            max_output_size=50,
+            max_output_size=70,
             iou_threshold=threshold,
             score_threshold=threshold
-        ).numpy()  # Convert tensor to numpy array for indexing
-
+        ).numpy() 
         if len(boxes) != 0:
             for i in boxIdx:
                 box = tuple(boxes[i].tolist())
